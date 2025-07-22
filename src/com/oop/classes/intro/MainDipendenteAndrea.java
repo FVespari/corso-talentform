@@ -14,6 +14,10 @@ public class MainDipendenteAndrea {
 		dip.paga(150);
 		
 		dip.stampa();
+		
+		
+		
+		
 
 	}
 
