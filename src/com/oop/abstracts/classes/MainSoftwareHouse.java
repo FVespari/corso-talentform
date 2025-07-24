@@ -1,11 +1,11 @@
 package com.oop.abstracts.classes;
 
-public class MainSoftwareHouse extends Professionista{
+public class MainSoftwareHouse /*extends Professionista*/{ // non serve estendere nulla
 	
-	public MainSoftwareHouse(int giornateLavoro, int compensoAlGiorno) {
-		super(giornateLavoro, compensoAlGiorno);
-		// TODO Auto-generated constructor stub
-	}
+//	public MainSoftwareHouse(int giornateLavoro, int compensoAlGiorno) {
+//		super(giornateLavoro, compensoAlGiorno);
+//		// TODO Auto-generated constructor stub
+//	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
