@@ -11,6 +11,7 @@
 package com.collections;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Purse {
 	
@@ -28,11 +29,33 @@ public class Purse {
 
 	// metodo stampa
 	public String stampa() {
-		return "QUESTO E IL PURSE" + monete;
+		return "QUESTO E IL PURSE: " + monete;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+
+		Purse listaMonete = new Purse();
+
+		System.out.println("Inserisci una moneta");
+		System.out.println("Per uscire del programa digita x");
+
+		boolean exit = false;
+
+		while (!exit) {
+			String moneta = scan.nextLine();
+
+			if (moneta.equalsIgnoreCase("x")) {
+				exit = true;
+			} else {
+				listaMonete.addCoin(moneta);
+			}
+		}
+
+		System.out.println(listaMonete.stampa());
+		scan.close();
 
 	}
 

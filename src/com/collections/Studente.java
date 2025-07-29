@@ -63,12 +63,12 @@ public class Studente {
 
 		ArrayList<Studente> studenti = new ArrayList<Studente>();
 				
-		studenti.add(new Studente("Topolino", 21));
+		studenti.add(new Studente("Topolino", 22));
 		studenti.add(new Studente("Minnie", 21));
 		studenti.add(new Studente("Paperino", 19));
 		studenti.add(new Studente("Paperina", 18));
 		studenti.add(new Studente("Taz", 27));
-		studenti.add(new Studente("Bugs Bunny", 21));
+		studenti.add(new Studente("Bugs Bunny", 23));
 		studenti.add(new Studente("Beep Beep", 25));
 		
 		System.out.println("Stampo tutti gli studenti:");
@@ -213,6 +213,112 @@ public class Studente {
 		Set<String> pulisceDuplicati = new LinkedHashSet<>(listaNomi);
 		System.out.println("Stampo tutto l'arrayList listaNomi togliendo le duplicazioni");
 		System.out.println(pulisceDuplicati);
+		
+		System.out.println();
+		System.out.println("=====================================================");
+		System.out.println();
+		
+		// Conta quante volte compare "Anna" in una lista.
+
+		List<String> contaNomi = new ArrayList<>(List.of("anna", "pluto", "topolino", "anna", "topolino", "anna", "pippo"));
+		
+		int contatoreNomeAnna = 0;
+		
+		for (String s : contaNomi) {
+			//if(s.equals("anna"))		//alternativa
+			if(s.equalsIgnoreCase("anna"))
+				contatoreNomeAnna++;
+		}
+		
+		System.out.println("Quante volte compare \"Anna\" nella lista contaNomi? " + contatoreNomeAnna + " volte.");
+		
+		System.out.println();
+		System.out.println("=====================================================");
+		System.out.println();
+		
+		// Trova e stampa lo studente con età minore. (soluzione Francesco)
+		
+		int etàMinore = studenti.get(0).età;
+		int indiceEtàMinore = 0;
+		
+//		for (Studente s : studenti) {			
+//			if(s.età < etàMinore)
+//				etàMinore = s.età;
+//		}
+		
+		for (int i = 0; i < studenti.size(); i++) {
+			if(studenti.get(i).età < etàMinore) {
+				etàMinore = studenti.get(i).età;
+				indiceEtàMinore = i;
+			}
+		}
+				
+		System.out.println("Lo studente di minore età nell'array studenti al momento è: " + studenti.get(indiceEtàMinore));
+		
+		System.out.println();
+		System.out.println("=====================================================");
+		System.out.println();
+		
+		// Trova e stampa lo studente con età minore. (soluzione Danai)
+		
+		studenti.add(new Studente("Topo Gigio", 18));
+		studenti.add(new Studente("Calimero", 19));
+				
+		studenti.sort(Comparator.comparing(Studente:: getEtà));
+		
+		System.out.println("Lo studente di minore età nell'array studenti al momento è (versione Danai): " + studenti.get(0));
+		
+		System.out.println();
+		System.out.println("=====================================================");
+		System.out.println();
+		
+		// Trova e stampa lo studente con età minore. (risoluzione per Gianfranco) 
+		
+		ArrayList<Studente> studentiAccademiaGF = new ArrayList<Studente>();
+		
+		studentiAccademiaGF.add(new Studente("Giulia", 22));
+		studentiAccademiaGF.add(new Studente("Cesare", 21));
+		studentiAccademiaGF.add(new Studente("Marco", 19));
+		studentiAccademiaGF.add(new Studente("Antonio", 18));
+		studentiAccademiaGF.add(new Studente("Cicerone", 15));
+		
+		studentiAccademiaGF.sort(Comparator.comparing(Studente:: getEtà));
+		
+		System.out.println("Stampo tutti gli studenti:");
+		
+		for (Studente s : studentiAccademiaGF) {
+			System.out.println(s);
+		}
+		
+		System.out.println("Lo studente di minore età nell'array studentiAccademiaGF al momento è (versione Danai): " + studentiAccademiaGF.get(0));
+		
+		System.out.println();
+		System.out.println("=====================================================");
+		System.out.println();
+		
+		// Trova e stampa lo studente con eta minore. (soluzione Emir)
+		Studente studentePiùPiccolo = Collections.min(studenti, Comparator.comparing(Studente:: getEtà));
+		System.out.println("Studente con la età minore è (versione Emir): " + studentePiùPiccolo);
+		
+		System.out.println();
+		System.out.println("=====================================================");
+		System.out.println();
+		
+		// Crea un ArrayList<ArrayList<Integer>> contenente 3 liste di interi. Stampale.
+		
+		ArrayList<ArrayList<Integer>> listaDiListe = new ArrayList<>();
+
+		ArrayList<Integer> lista1 = new ArrayList<>(List.of(1,2,3,4,5));
+		ArrayList<Integer> lista2 = new ArrayList<>(List.of(6,7,8,9,10));
+		ArrayList<Integer> lista3 = new ArrayList<>(List.of(11,12,13,14,15));
+		
+		listaDiListe.add(lista1);
+		listaDiListe.add(lista2);
+		listaDiListe.add(lista3);
+		
+		for (ArrayList<Integer> l : listaDiListe) {
+			System.out.println(l);
+		}
 		
 		
 		
