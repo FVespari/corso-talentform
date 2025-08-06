@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="manipolazioneCSS">Qui manipolo il CSS. PRIMA</h1>
+
+    <a id="manipolazioneLink">LINK</a>
+
+    <script>
+        let js = 
+            document.getElementById("manipolazioneCSS").innerHTML = "Qui ho manipolato il CSS. DOPO";
+            document.getElementById("manipolazioneCSS").style.color = "white";
+            document.getElementById("manipolazioneCSS").style.backgroundColor = "red";
+            document
+                .getElementById("manipolazioneLink")
+                .setAttribute("href", "https://www.google.com");
+
+      let para = document.createElement("h1"); //inizio document.createElement
+      let node = document.createTextNode("Create New Element");
+      
+      para.appendChild(node);
+      
+      let element = document.getElementById("manipolazioneCSS");
+      element.appendChild(para);
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+
+    <h1>Il tempo sta correndo!</h1>
+    
+    <div id="divano">
+      <h1 id="timeOut"></h1>
+    </div>
+
+    <script>
+      let js = 
+            document.getElementById("divano").style.backgroundColor = "black";
+            document.getElementById("divano").style.width = "500px";
+            document.getElementById("divano").style.height = "300px";
+
+      setTimeout(timeout, 5000); // evento temporizzato
+      function timeout() {
+        document.getElementById("timeOut").innerHTML = "Tempo scaduto";
+        document.getElementById("timeOut").style.color = "white";
+        document.getElementById("timeOut").style.backgroundColor = "red";
+      }
+
+    </script>
+
+  </body>
+</html>

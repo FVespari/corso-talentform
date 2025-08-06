@@ -1,0 +1,33 @@
+[
+  
+{
+  "id":1,
+  "nomeStudente": "Achille",
+  "etàStudente": 15,
+  "zatiScuola":{
+    "nomeScuola": "Liceo",
+    "indirizzoScuola": "via delle cavallette"
+  }
+},
+
+{
+  "id":2,
+  "nomeStudente": "Paride",
+  "etàStudente": 16,
+  "zatiScuola":{
+    "nomeScuola": "Professionale",
+    "indirizzoScuola": "via dei lombrichi"
+  }
+},
+
+{
+  "id":3,
+  "nomeStudente": "Ettore",
+  "etàStudente": 17,
+  "zatiScuola":{
+    "nomeScuola": "Industriale",
+    "indirizzoScuola": "via delle zanzare"
+  }
+}
+
+]

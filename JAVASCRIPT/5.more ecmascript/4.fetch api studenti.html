@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studenti</title>
+  </head>
+  <body>
+
+    <script>
+      
+      async function fetchAPIdiEsempio() {
+        //const url = "https://mocki.io/v1/26a9392e-c02a-45ab-8a30-50f7b9015fd8";
+        const url = "C:/Users/franc/corso-talentform/JAVASCRIPT/5.more ecmascript"
+        const response = await fetch(url);
+        const resp = await response.json();
+        return resp;
+      }
+      
+      fetchAPIdiEsempio().then(console.log);
+    
+    </script>
+  
+  </body>
+</html>
